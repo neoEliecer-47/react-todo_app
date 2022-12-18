@@ -21,11 +21,9 @@ useEffect(() => {
   
     console.log("Guardar todo local");
       localStorage.setItem("todos", JSON.stringify(todos));
-
-  
   
 }, [todos])
-  //esto se va a ejecutar cada vx que cambien los todos
+  //esto se va a ejecutar cada vez que cambien los todos, es decir, cuando se guarde un todo, cuando se edite o elimine
   
   
   const AgregarTodo = todo => {//esta arrow funtion se enviará al formulario como 'props' (comunicacion entre componentes)
@@ -50,7 +48,7 @@ useEffect(() => {
   
   return (
     <>
-        <Formulario AgregarTodo={AgregarTodo}/> {/*componente hijo que esta recibiendo el metodo, para ser activado en el componente hijo*/}
+        <Formulario AgregarTodo={AgregarTodo}/> {/*componente padre que esta recibiendo el metodo, para ser activado en el componente hijo ''props */}
         
         <ul className='list-group lis-group-numbered mt-3'>
 

@@ -69,7 +69,7 @@ const handleSubmit = t => {
     return (
     <>
         <h2 className="text-center"><strong>Todo List</strong></h2>
-        <form className="form-control border-primary" onSubmit={handleSubmit}>
+        <form className="form-control border-primary" onSubmit={handleSubmit}> {/*handdleSubmit te devuelve un objeto */}
         <input
               type="text"
               name="nombre"
